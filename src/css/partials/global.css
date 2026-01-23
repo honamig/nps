@@ -1,0 +1,30 @@
+/* Global styles */
+
+* { box-sizing: border-box; }
+
+img { max-width: 100%; }
+
+body {
+  font-family: var(--bs-body-font-family);
+  font-size: 18px;
+  margin: 0;
+}
+
+a:link,
+a:visited { color: var(--bs-link-color); }
+
+a:hover { color: var(--bs-link-hover-color); }
+
+/* Skip links styling */
+.skip-links ul { list-style-type: none; margin: 0; padding-left: 0; }
+
+.skip-links a {
+  font-size: 11px;
+  font-size: 0.6875rem;
+  position: absolute;
+  right: 20px;
+  top: -200px;
+  z-index: -1;
+}
+
+.skip-links a:focus { top: 2px; z-index: 9999; }

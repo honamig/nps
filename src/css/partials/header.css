@@ -1,0 +1,75 @@
+/* Title and logo styling */
+.site-title {
+  display: flex;
+  align-items: center;
+}
+.site-title h1 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.site-title > span {
+  font-size: 1rem;
+  margin-left: 0.3em;
+}
+
+.logo {
+  height: 0;
+  width: 0;
+  margin: 0.5em;
+  display: inline-block;
+  border-top: 34px solid var(--bs-light-green);
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+}
+
+/* Global navbar styling */
+
+.global-header {
+  background-color: var(--bs-black);
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  fill: white;
+}
+
+.global-header a:link,
+.global-header a:visited,
+#park-header a:link,
+#park-header a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.global-header .icon { width: 20px; height: 20px; }
+
+.global-header__right {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+}
+
+.global-header__right .search-icon {
+  padding: 0 1rem;
+  margin-top: 6px;
+}
+
+.global-header__right button {
+  background-color: white;
+  border: none;
+  color: rgb(71, 110, 76);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1.2rem;
+  gap: 0.3rem;
+  margin-right: 1rem;
+  display: flex;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+  align-items: center;
+  border-left: 1px solid var(--bs-grey-5);
+}
+
+.global-header__right button:hover {
+  color: rgb(56, 88, 61);
+}

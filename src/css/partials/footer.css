@@ -1,0 +1,17 @@
+/* park-footer */
+#park-footer {
+  padding: 2rem 1rem;
+  background-image: url("../images/topo_pattern.png");
+  background-repeat: repeat;
+}
+
+#park-footer .contact {
+  max-width: 70rem;
+  margin: 0 auto;
+}
+
+#park-footer h3 { margin-top: 0; }
+
+#park-footer h4 { margin-bottom: 0.25rem; }
+
+#park-footer p { margin: 0; }
