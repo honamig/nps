@@ -56,7 +56,14 @@ export function getInfoLinks(images) {
   return withUpdatedImages;
 }
 
-export async function getVisitorCenterData() {
-  const vc = await getJson("visitorcenters?parkCode=glac");
-  return vc.data;
+export async function getVisitorCenterData(parkCode) {
+  const endpoint = `visitorcenters?parkCode=${parkCode}`;
+  const data = await getJson(endpoint);
+  return data.data;
+}
+
+export async function getAlertsData(parkCode) {
+  const endpoint = `alerts?parkCode=${parkCode}`;
+  const data = await getJson(endpoint);
+  return data.data;
 }

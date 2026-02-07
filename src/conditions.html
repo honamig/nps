@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yellowstone National Park</title>
-    <script type="module" src="js/main.js"></script>
+    <script type="module" src="js/conditions.js"></script>
   </head>
   <body>
     <p class="disclaimer">
@@ -142,8 +142,25 @@
       </section>
     </header>
   <main id="main">
-    <section class="intro"></section>
-    <section class="info"></section>
+    <h1>Current Conditions</h1>
+    <section class="alerts" id="alerts">
+        <h2>Alerts</h2>
+        <ul></ul>
+    </section>
+    <section class="visitor" id="visitor">
+        <h2>Visitor Services</h2>
+        <details name="current-details">
+            <summary>Visitor Centers</summary>
+            <ul></ul>
+        </details>
+    </section>
+    <section class="activities" id="activities">
+        <h2>Activities</h2>
+        <details name="current-details">
+            <summary>All Activities</summary>
+            <ul></ul>
+        </details>
+    </section>
   </main>
     <footer id="park-footer"></footer>
   </body>

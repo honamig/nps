@@ -84,4 +84,8 @@
   --bs-link-hover-color: #003e6b;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
+  --alert-closure: #cb2027;
+  --alert-caution: #ed7e31;
+  --alert-information: #2451a9;
+  --alert-danger: #720f04;
 }
