@@ -10,7 +10,7 @@
     <p class="disclaimer">
       This is not a real NPS website. It is an educational exercise. If you
       landed here by accident, to find the real website visit
-      <a href="parkUrl">Yellowstone National Park</a>
+      <a href="#">Yellowstone National Park</a>
     </p>
     <div class="skip-links" aria-label="short-cut links" role="navigation">
       <ul>
@@ -53,14 +53,33 @@
             </svg>
             <span class="visually-hidden">Search</span>
           </a>
-          <button id="global-nav-toggle">
-            <svg class="icon">
-              <use xlink:href="/images/sprite.symbol.svg#menu"></use>
-            </svg>
-            <span class="visually-hidden">Open</span> Menu
-          </button>
+          <button
+            id="global-nav-toggle"
+            class="global-nav__toggle"
+            aria-expanded="false"
+            aria-label="Open Menu"
+            >
+            <div class="global-nav__toggle--closed">
+                <svg class="icon">
+                <use
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/images/sprite.symbol.svg#menu"
+                ></use>
+                </svg>
+                <span class="visually-hidden">Open</span> Menu
+            </div>
+            <div class="global-nav__toggle--open">
+                <svg class="icon">
+                <use
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="/images/sprite.symbol.svg#close"
+                ></use>
+                </svg>
+                Close
+            </div>
+        </button>
         </div>
-        <!--
+        
         <nav class="global-nav">
           <h2 class="global-nav__section-heading">Explore this Park</h2>
           <ul class="global-nav__list">
@@ -79,8 +98,8 @@
             </li>
           </ul>
         </nav>
-        -->
       </section>
+
       <section id="park-header">
         <div class="hero-banner">
           <img

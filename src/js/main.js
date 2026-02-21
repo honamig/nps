@@ -20,6 +20,28 @@ function setParkInfoLinks(data) {
   infoEl.insertAdjacentHTML("afterbegin", html);
 }
 
+function enableNavigation() {
+  const menuButton = document.querySelector("#global-nav-toggle");
+
+  menuButton.addEventListener("click", (ev) => {
+    let target = ev.target;
+
+    document.querySelector(".global-nav").classList.toggle("show");
+
+    if(target.tagName !== "BUTTON") {
+      target = target.closest("button");
+    }
+
+    if(document.querySelector(".global-nav").classList.contains("show")) {
+      target.setAttribute("aria-expanded", "true");
+      target.setAttribute("aria-label", "Close Menu");
+    } else {
+      target.setAttribute("aria-expanded", "false");
+      target.setAttribute("aria-label", "Open Menu");
+    }
+  });
+}
+
 async function init() {
   const parkData = await getParkData();
   const links = getInfoLinks(parkData.images);
@@ -27,6 +49,7 @@ async function init() {
   setHeaderFooter(parkData);
   setParkIntro(parkData);
   setParkInfoLinks(links);
+  enableNavigation();
 }
 
 init();
