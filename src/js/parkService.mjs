@@ -9,7 +9,7 @@ async function getJson(url) {
     },
   };
 
-  let data = {};
+  let data;
   const response = await fetch(baseUrl + url, options);
 
   if (response.ok) {
@@ -27,24 +27,25 @@ export async function getParkData() {
 }
 
 const parkInfoLinks = [
-    {
-        name: "Current Conditions &#x203A;",
-        link: "conditions.html",
-        image: "",
-        description: "See what conditions to expect in the park before leaving on your trip!",
-    },
-    {
-        name: "Fees and Passes &#x203A;",
-        link: "fees.html",
-        image: "",
-        description: "Learn about the fees and passes that are available.",
-    },
-    {
-        name: "Visitor Centers &#x203A;",
-        link: "visitor_centers.html",
-        image: "",
-        description: "Learn about the visitor centers in the park.",
-    },
+  {
+    name: "Current Conditions &#x203A;",
+    link: "conditions.html",
+    image: "",
+    description:
+      "See what conditions to expect in the park before leaving on your trip!",
+  },
+  {
+    name: "Fees and Passes &#x203A;",
+    link: "fees.html",
+    image: "",
+    description: "Learn about the fees and passes that are available.",
+  },
+  {
+    name: "Visitor Centers &#x203A;",
+    link: "visitor_centers.html",
+    image: "",
+    description: "Learn about the visitor centers in the park.",
+  },
 ];
 
 export function getInfoLinks(images) {
@@ -52,7 +53,6 @@ export function getInfoLinks(images) {
     item.image = images[index + 2].url;
     return item;
   });
-
   return withUpdatedImages;
 }
 
@@ -60,6 +60,12 @@ export async function getVisitorCenterData(parkCode) {
   const endpoint = `visitorcenters?parkCode=${parkCode}`;
   const data = await getJson(endpoint);
   return data.data;
+}
+
+// Fetch a single visitor center by its id (undocumented but functional)
+export async function getParkVisitorCenterDetails(id) {
+  const parkData = await getJson(`visitorcenters?id=${id}`);
+  return parkData.data[0];
 }
 
 export async function getAlertsData(parkCode) {

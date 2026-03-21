@@ -1,0 +1,185 @@
+/* visitor-center.css */
+
+.vc-name {
+  border-bottom: 1px solid var(--bs-gray-400);
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.vc-name svg {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
+.vc-info {
+  max-width: 70rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.vc-info figure {
+  margin: 1em 3em;
+  float: right;
+  max-width: 400px;
+}
+
+.vc-info img {
+  width: 100%;
+  display: block;
+}
+
+.vc-info figcaption {
+  font-size: 0.8em;
+  margin-top: 0.25em;
+}
+
+.vc-info figcaption > span {
+  display: block;
+  font-size: 0.8em;
+  font-style: italic;
+}
+
+.vc-info p {
+  line-height: 1.7;
+}
+
+/* Details / accordion section */
+.vc-details-list {
+  max-width: 70rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  clear: both;
+}
+
+.vc-details-list details {
+  border: 1px solid var(--bs-gray-400);
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+
+.vc-details-list svg,
+.vc-gallery svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 1rem;
+  fill: black;
+}
+
+.vc-details-list summary {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: bold;
+  position: relative;
+  list-style: none;
+  padding: 0.25rem 0;
+}
+
+.vc-details-list details[open] summary {
+  margin-bottom: 1rem;
+}
+
+/* Hide default markers */
+.vc-details-list summary::marker,
+.vc-details-list summary::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom arrow indicator */
+.vc-details-list summary::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  background-image: url("../images/arrow.svg");
+  background-size: 1.25rem 1.25rem;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.vc-details-list details[open] > summary::after {
+  transform: rotate(180deg);
+}
+
+/* Addresses */
+.vc-addresses__physical,
+.vc-addresses__mailing {
+  margin-bottom: 1rem;
+}
+
+.vc-addresses__physical h3,
+.vc-addresses__mailing h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Amenities */
+#vcAmenities ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#vcAmenities li {
+  margin-bottom: 1em;
+  padding-left: 0.5rem;
+  border-left: 3px solid var(--bs-gray-300);
+}
+
+/* Contact */
+.vc-contact__email,
+.vc-contact__phone {
+  margin-bottom: 1rem;
+}
+
+.vc-contact__email h3,
+.vc-contact__phone h3 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Gallery */
+.vc-gallery {
+  max-width: 70rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.vc-gallery > h2 {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--bs-gray-400);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.vc-gallery ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+  flex-wrap: wrap;
+}
+
+/* Square-cropped gallery images */
+.vc-gallery img {
+  width: 265px;
+  height: 265px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+#main {
+  padding: 1.5rem;
+  max-width: 70rem;
+  margin: 0 auto;
+}
